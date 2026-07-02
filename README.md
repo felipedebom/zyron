@@ -2,8 +2,6 @@
 
 <img src="assets/logo/logo-horizontal.png" alt="ZYRON" width="260">
 
-# ZYRON
-
 ### Desenvolvendo o Futuro.
 
 Site institucional desenvolvido para representar uma empresa moderna de tecnologia, com foco em design, performance e experiência do usuário.
