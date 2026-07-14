@@ -7,6 +7,11 @@ const topButton = document.querySelector(".top-button");
 const menuToggle = document.querySelector(".menu-toggle");
 const navMenu = document.querySelector(".nav-menu");
 const contactForm = document.querySelector("#contactForm");
+const heroDevices = document.querySelector(".hero-devices");
+
+const monitor = document.querySelector(".device-monitor");
+const notebook = document.querySelector(".device-notebook");
+const phone = document.querySelector(".device-phone");
 
 function revelarElementos() {
     const alturaTela = window.innerHeight;
@@ -100,5 +105,26 @@ window.addEventListener("load", () => {
         document.body.classList.add("page-loaded");
 
     }, 1700);
+
+});
+heroDevices?.addEventListener("mousemove", (event) => {
+
+    const rect = heroDevices.getBoundingClientRect();
+
+    const x = event.clientX - rect.left;
+
+    const y = event.clientY - rect.top;
+
+    const moveX = (x - rect.width / 2) / 40;
+
+    const moveY = (y - rect.height / 2) / 40;
+
+    monitor.style.transform =
+        `translate(${moveX}px, ${moveY}px)`;
+
+});
+heroDevices?.addEventListener("mouseleave", () => {
+
+    monitor.style.transform = "translate(0px,0px)";
 
 });
