@@ -289,9 +289,6 @@ button{
 
     font-size:17px;
      font-weight:600;
- 
-     
-
 
 }
 
@@ -575,11 +572,9 @@ transform-origin: center center;
 }
 
 .titulo{
-    margin-bottom:18px;
+    margin-bottom:30px;
     font-size:clamp(34px,4vw,52px);
     line-height:1.12;
-    position: relative;
-    top: -118px;
 }
 
 .subtitulo{
@@ -588,9 +583,82 @@ transform-origin: center center;
     color:var(--text);
     font-size:18px;
     line-height:1.8;
-    position: relative;
-    top: -115px;
 }
+
+/* ===========================
+   ESPAÇAMENTO DAS SEÇÕES
+=========================== */
+
+/* ===== SOBRE ===== */
+
+#sobre .section-heading{
+    margin-bottom:50px;
+}
+
+/* ===== SERVIÇOS ===== */
+
+#servicos .section-heading{
+    margin-bottom:55px;
+}
+
+/* ===== POR QUE ===== */
+
+#porque .section-heading{
+    margin-bottom:65px;
+}
+
+/* ===== PROJETOS ===== */
+
+#projetos .section-heading{
+    margin-bottom:70px;
+}
+
+/* ===========================
+   TÍTULOS
+=========================== */
+
+/* ===== SOBRE ===== */
+
+#sobre .titulo{
+    max-width:700px;
+}
+
+#sobre .subtitulo{
+    max-width:760px;
+}
+
+/* ===== SERVIÇOS ===== */
+
+#servicos .titulo{
+    max-width:700px;
+}
+
+#servicos .subtitulo{
+    max-width:760px;
+}
+
+/* ===== POR QUE ===== */
+
+#porque .titulo{
+    max-width:650px;
+}
+
+#porque .subtitulo{
+    max-width:700px;
+}
+
+/* ===== PROJETOS ===== */
+
+#projetos .titulo{
+    max-width:700px;
+}
+
+#projetos .subtitulo{
+    max-width:760px;
+}
+
+
+
 
 .sobre-grid,
 .cards,
@@ -624,8 +692,6 @@ transform-origin: center center;
 .sobre-card{
     min-height:220px;
     padding:34px;
-    position: relative;
-    top: -130px;
     transition:
         transform .4s ease,
         box-shadow .4s ease,
@@ -679,8 +745,6 @@ transform-origin: center center;
 .card{
     padding:34px;
     transition:.35s ease;
-    position: relative;
-    top: -115px;
 }
 
 .sobre-card:hover,
