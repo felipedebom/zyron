@@ -331,24 +331,32 @@ section{
 }
 
 .hero{
-    min-height:820px;
+    min-height:100vh;
     display:flex;
     align-items:center;
     justify-content:center;
     padding:80px 80px 40px;
+    
 }
 
 .hero-content{
     width:100%;
     max-width:1420px;
+
     display:grid;
     grid-template-columns:1fr 1.2fr;
+
+
     align-items:center;
-    gap:54px;
+    gap:64px;
+    
 }
 
 .hero-text{
+    width:100%;
+    max-width:640px;
     animation:fadeLeft 1s ease both;
+    
 }
 
 .eyebrow,
@@ -376,11 +384,18 @@ section{
 }
 
 .hero-text h1{
-    max-width:760px;
+    width:100%;
+    max-width:97%;
+
     margin-bottom:28px;
-    font-size:clamp(44px,6vw,78px);
-    line-height:1.04;
+
+    font-size:clamp(38px,8vw,78px);
+
+    line-height:1.05;
+
     font-weight:800;
+
+    word-break:normal;
 }
 
 .hero-text h1 span{
@@ -411,9 +426,10 @@ section{
 
     position:relative;
 
-    min-height:680px;
+    min-height:auto;
 
     overflow:visible;
+    margin-top:40px;
 
 }
 
@@ -421,10 +437,10 @@ section{
 
     position:relative;
 
-    width:980px;
+    width:min(95vw,980px);
 
-    height:760px;
-    isolation:isolate;
+      aspect-ratio:980/760;
+      transform:translateY(-90px);
 
 }
 .hero-devices::before{
@@ -500,9 +516,9 @@ section{
 
     width:940px;
 
-    top:-16px;
+    top:-2%;
 
-    left:-175px;
+    left:-18%;
 
     z-index:1;
     animation:floatMonitor 8s ease-in-out infinite;
@@ -518,11 +534,11 @@ transform-origin: center center;
 
     position:absolute;
 
-    width:524px;
+    width:54%;
 
-    left:196px;
+    left:20%;
 
-    top:289px;
+    top:38%;
 
     z-index:2;
      animation:floatNotebook 7s ease-in-out infinite;
@@ -539,11 +555,11 @@ transform-origin: center center;
 
     position:absolute;
 
-    width:258px;
+    width:26%;
 
-    left:161px;
+    left:16%;
 
-    top:418px;
+    top:55%;
 
     z-index:3;
     animation:floatPhone 8.5s ease-in-out infinite;
@@ -613,49 +629,7 @@ transform-origin: center center;
     margin-bottom:70px;
 }
 
-/* ===========================
-   TÍTULOS
-=========================== */
 
-/* ===== SOBRE ===== */
-
-#sobre .titulo{
-    max-width:700px;
-}
-
-#sobre .subtitulo{
-    max-width:760px;
-}
-
-/* ===== SERVIÇOS ===== */
-
-#servicos .titulo{
-    max-width:700px;
-}
-
-#servicos .subtitulo{
-    max-width:760px;
-}
-
-/* ===== POR QUE ===== */
-
-#porque .titulo{
-    max-width:650px;
-}
-
-#porque .subtitulo{
-    max-width:700px;
-}
-
-/* ===== PROJETOS ===== */
-
-#projetos .titulo{
-    max-width:700px;
-}
-
-#projetos .subtitulo{
-    max-width:760px;
-}
 
 
 
@@ -1081,7 +1055,7 @@ footer p{
     .header-btn{padding-inline:20px;}
     .hero-content{grid-template-columns:1fr;max-width:920px;text-align:center;}
     .hero-text p,.hero-buttons{margin-left:auto;margin-right:auto;justify-content:center;}
-    .hero-image{order:-1;}
+    .hero-image{order:2;}
    
     .sobre-grid,.cards,.portfolio-grid,.testimonials-grid{grid-template-columns:repeat(2,1fr);}
     .sobre-card.destaque{grid-column:1/-1;min-height:360px;}
@@ -1120,20 +1094,50 @@ footer p{
     .contact-grid,.porque-grid{grid-template-columns:1fr;}
 }
 
-@media(max-width:680px){
-    .logo{width:148px;}
-    .hero-text h1{font-size:42px;}
-    .hero-text p,.subtitulo{font-size:16px;}
-    .hero-buttons{display:grid;grid-template-columns:1fr;width:100%;}
-   
-   
-    .sobre-grid,.cards,.portfolio-grid,.testimonials-grid{grid-template-columns:1fr;}
-    .sobre-card,.card,.porque-item,.testimonial,.contact-form,.contact-info{padding:26px;}
-    .sobre-card.destaque{min-height:300px;}
-    .cta-container{padding:46px 24px;}
-    .projeto img{height:210px;}
-}
+@media (max-width:680px){
 
+    .hero-text{
+        max-width:100%;
+    }
+
+    .hero-text h1{
+        font-size:clamp(34px,11vw,44px);
+        line-height:1.08;
+    }
+
+    .hero{
+        padding-top:160px;
+    }
+
+    .sobre-grid,
+    .cards,
+    .portfolio-grid,
+    .testimonials-grid{
+        grid-template-columns:1fr;
+    }
+
+    .sobre-card,
+    .card,
+    .porque-item,
+    .testimonial,
+    .contact-form,
+    .contact-info{
+        padding:26px;
+    }
+
+    .sobre-card.destaque{
+        min-height:300px;
+    }
+
+    .cta-container{
+        padding:46px 24px;
+    }
+
+    .projeto img{
+        height:210px;
+    }
+
+}
 @media(prefers-reduced-motion:reduce){
     *,*::before,*::after{
         scroll-behavior:auto!important;
