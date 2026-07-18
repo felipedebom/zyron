@@ -97,14 +97,23 @@ window.addEventListener("load", () => {
 
     const loader = document.getElementById("loader");
 
-    setTimeout(() => {
+    if (loader) {
 
-        loader.classList.add("hide");
+        setTimeout(() => {
+
+            loader.classList.add("hide");
+
+            document.body.classList.remove("loading");
+            document.body.classList.add("page-loaded");
+
+        }, 800);
+
+    } else {
 
         document.body.classList.remove("loading");
         document.body.classList.add("page-loaded");
 
-    }, 1700);
+    }
 
 });
 heroDevices?.addEventListener("mousemove", (event) => {
