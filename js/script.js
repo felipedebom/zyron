@@ -95,9 +95,15 @@ window.addEventListener("load", () => {
     revelarElementos();
     controlarTopo();
 
-    const loader = document.getElementById("loader");
+   const loader = document.getElementById("loader");
 
-    if (loader) {
+if (loader) {
+
+    const jaVisitou = sessionStorage.getItem("zyronLoader");
+
+    if (!jaVisitou) {
+
+        sessionStorage.setItem("zyronLoader", "true");
 
         setTimeout(() => {
 
@@ -110,11 +116,19 @@ window.addEventListener("load", () => {
 
     } else {
 
+        loader.remove();
+
         document.body.classList.remove("loading");
         document.body.classList.add("page-loaded");
 
     }
 
+} else {
+
+    document.body.classList.remove("loading");
+    document.body.classList.add("page-loaded");
+
+}
 });
 heroDevices?.addEventListener("mousemove", (event) => {
 

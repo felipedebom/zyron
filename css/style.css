@@ -799,6 +799,7 @@ transform-origin: center center;
 .projeto{
     overflow:hidden;
     transition:.35s ease;
+    display: block;
 }
 
 .projeto img{
