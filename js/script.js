@@ -2,6 +2,30 @@
 
 document.body.classList.add("loading");
 
+// Mantém a navegação funcional tanto na Vercel quanto ao abrir os HTMLs
+// diretamente pelo explorador de arquivos (protocolo file://).
+if (window.location.protocol === "file:") {
+    const localRoutes = {
+        "/": "index.html",
+        "/sobre": "sobre.html",
+        "/servicos": "servicos.html",
+        "/produtos": "produtos.html",
+        "/contato": "contato.html",
+        "/landing-pages": "landing-pages.html",
+        "/mesh-conect": "mesh-conect.html"
+    };
+
+    document.querySelectorAll('a[href^="/"]').forEach((link) => {
+        const target = link.getAttribute("href");
+        const [route, hash = ""] = target.split("#");
+        const localFile = localRoutes[route];
+
+        if (localFile) {
+            link.setAttribute("href", `${localFile}${hash ? `#${hash}` : ""}`);
+        }
+    });
+}
+
 const reveals = document.querySelectorAll(".reveal");
 const topButton = document.querySelector(".top-button");
 const menuToggle = document.querySelector(".menu-toggle");
@@ -31,10 +55,16 @@ function controlarTopo() {
     topButton.classList.toggle("show", window.scrollY > 520);
 }
 
+topButton?.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
 function fecharMenu() {
     navMenu?.classList.remove("active");
     document.body.classList.remove("menu-open");
     menuToggle?.setAttribute("aria-expanded", "false");
+    menuToggle?.setAttribute("aria-label", "Abrir menu");
 
     const icon = menuToggle?.querySelector("i");
     icon?.classList.add("fa-bars");
@@ -48,6 +78,7 @@ menuToggle?.addEventListener("click", () => {
     document.body.classList.toggle("menu-open", aberto);
 
     menuToggle.setAttribute("aria-expanded", String(aberto));
+    menuToggle.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
 
     const icon = menuToggle.querySelector("i");
 
@@ -62,14 +93,36 @@ navMenu?.querySelectorAll("a").forEach((link) => {
 
 });
 
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && navMenu?.classList.contains("active")) {
+        fecharMenu();
+        menuToggle?.focus();
+    }
+});
+
+document.addEventListener("click", (event) => {
+    if (!navMenu?.classList.contains("active")) return;
+    if (navMenu.contains(event.target) || menuToggle?.contains(event.target)) return;
+    fecharMenu();
+});
+
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 900) fecharMenu();
+});
+
 contactForm?.addEventListener("submit", (event) => {
 
     event.preventDefault();
 
-    const nome = document.querySelector("#nome").value.trim();
-    const empresa = document.querySelector("#empresa").value.trim();
-    const tipo = document.querySelector("#tipo").value;
-    const mensagem = document.querySelector("#mensagem").value.trim();
+    const nome = contactForm.querySelector("#nome").value.trim();
+    const empresa = contactForm.querySelector("#empresa").value.trim();
+    const tipo = contactForm.querySelector("#tipo").value;
+    const mensagem = contactForm.querySelector("#mensagem").value.trim();
+
+    if (!nome || !tipo || !mensagem) {
+        contactForm.reportValidity();
+        return;
+    }
 
     const texto =
         `Olá, ZYRON! Meu nome é ${nome}. Empresa: ${empresa || "não informada"}. Tipo de projeto: ${tipo}. Mensagem: ${mensagem}`;

@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ZYRON | Sobre</title>
+    <title>Sobre a ZYRON | Tecnologia com Propósito</title>
 
     <meta name="description" content="Conheça a ZYRON, nossa história, missão e parceria com a Mesh Conect.">
     <meta name="theme-color" content="#070B14">
+    <link rel="canonical" href="https://zyrondigital.com.br/sobre">
+    <meta property="og:title" content="Sobre a ZYRON | Tecnologia com Propósito">
+    <meta property="og:description" content="Conheça a visão, os princípios e a forma de trabalhar da ZYRON.">
+    <meta property="og:type" content="website"><meta property="og:url" content="https://zyrondigital.com.br/sobre"><meta property="og:image" content="https://zyrondigital.com.br/assets/empresa/escritorio-zyron.png"><meta name="twitter:card" content="summary_large_image">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,12 +20,13 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=20260723l">
 
     <link rel="icon" href="assets/logo/logo-icon.png">
 </head>
 
 <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
 
     <!-- Header -->
@@ -34,18 +39,18 @@
         <button
             class="menu-toggle"
             aria-label="Abrir menu"
-            aria-expanded="false">
+            aria-expanded="false" aria-controls="menu-principal">
 
             <i class="fa-solid fa-bars"></i>
 
         </button>
 
-        <nav class="nav-menu" aria-label="Navegação principal">
+        <nav class="nav-menu" id="menu-principal" aria-label="Navegação principal">
 
             <a href="index.html">Início</a>
-            <a href="sobre.html">Sobre</a>
+            <a href="sobre.html" aria-current="page">Sobre</a>
             <a href="servicos.html">Serviços</a>
-            <a href="projetos.html">Projetos</a>
+            <a href="produtos.html">Produtos</a>
             <a href="contato.html">Contato</a>
 
         </nav>
@@ -65,7 +70,7 @@
     </header>
 
     <!-- Conteúdo -->
-    <main>
+    <main id="conteudo">
 
         <section class="internal-hero">
 
@@ -119,8 +124,8 @@
         <div class="about-story__visual">
 
             <img
-                src="assets/empresa/escritorio-zyron.png"
-                alt="Equipe da ZYRON">
+                src="assets/optimized/empresa-escritorio-zyron.webp"
+                alt="Ambiente tecnológico que representa a ZYRON" loading="lazy">
 
             <div class="about-mini-card">
 
@@ -148,6 +153,19 @@
 
 </section>
 
+<section class="about-principles reveal">
+    <div class="section-heading"><span class="section-tag">NOSSA DIREÇÃO</span><h2 class="titulo">Construir tecnologia útil, clara e preparada para durar.</h2></div>
+    <div class="principles-grid">
+        <article><span>MISSÃO</span><h3>Transformar necessidades reais em soluções digitais eficientes.</h3><p>Desenvolvemos produtos e projetos que ajudam empresas a vender, organizar processos e evoluir com mais confiança.</p></article>
+        <article><span>VISÃO</span><h3>Ser uma parceira tecnológica para o crescimento de empresas.</h3><p>Queremos construir relações de longo prazo e soluções que acompanhem novas etapas do negócio.</p></article>
+        <article><span>VALORES</span><h3>Clareza, responsabilidade e qualidade técnica.</h3><p>Trabalhamos com comunicação transparente, atenção aos detalhes e respeito à realidade de cada cliente.</p></article>
+    </div>
+</section>
+
+<section class="process-section reveal"><div class="section-heading"><span class="section-tag">COMO TRABALHAMOS</span><h2 class="titulo">Estratégia antes do código.</h2><p class="subtitulo">Cada decisão parte do problema que precisa ser resolvido e da experiência que queremos entregar.</p></div><ol class="process-grid"><li><span>01</span><h3>Escuta</h3><p>Entendemos o negócio e as prioridades.</p></li><li><span>02</span><h3>Planejamento</h3><p>Organizamos escopo, conteúdo e tecnologia.</p></li><li><span>03</span><h3>Construção</h3><p>Desenvolvemos, testamos e refinamos.</p></li><li><span>04</span><h3>Evolução</h3><p>Preparamos a solução para continuar crescendo.</p></li></ol></section>
+
+<section class="partnership-band partnership-band--visual partnership-band--about reveal"><div><span class="section-tag">PARCERIA ESTRATÉGICA</span><h2>Tecnologia pela ZYRON. Marketing pela Mesh Conect.</h2><p>Cada empresa atua em sua especialidade para oferecer uma jornada mais completa, sem misturar responsabilidades ou identidades.</p></div><a class="btn-cta" href="mesh-conect.html">Entender a parceria <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></section>
+
     </main>
 
     <!-- Botão topo -->
@@ -158,7 +176,8 @@
     <!-- Footer -->
     <footer>
 
-        <img src="assets/logo/1logo-horizontal.png" class="logo" alt="ZYRON">
+        <a href="index.html" class="footer-brand" aria-label="ZYRON — voltar à página inicial"><img src="assets/logo/1logo-horizontal.png" class="logo" alt="ZYRON" width="145" height="36" loading="lazy"></a>
+
 
         <a href="mailto:contato@zyrondigital.com.br" class="footer-email">
             <i class="fa-solid fa-envelope"></i>
@@ -171,7 +190,7 @@
 
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js?v=20260723b"></script>
 
 </body>
 </html>

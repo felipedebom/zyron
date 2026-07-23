@@ -1,99 +1,58 @@
-<div align="center">
+# ZYRON — Site Institucional
 
-<img src="assets/logo/logo-horizontal.png" alt="ZYRON" width="260">
+Site oficial da ZYRON, empresa de tecnologia especializada em produtos digitais, sistemas web, sites, Landing Pages, aplicativos, automações e integrações para empresas.
 
-### Desenvolvendo o Futuro.
+**Site oficial:** https://zyrondigital.com.br
 
-Site institucional desenvolvido para representar uma empresa moderna de tecnologia, com foco em design, performance e experiência do usuário.
+## Tecnologias
 
-**🌐 Projeto Online:**  
-https://zyron-one.vercel.app/
-
-</div>
-
----
-
-## 📖 Sobre o projeto
-
-A **ZYRON** é um projeto de portfólio criado para demonstrar habilidades em desenvolvimento Front-End.
-
-O objetivo foi construir um site moderno, responsivo e com uma identidade visual forte, simulando o site institucional de uma empresa de tecnologia.
-
-Durante o desenvolvimento foram aplicados conceitos de:
-
-- Design Responsivo
-- UI/UX
-- Animações em CSS
-- JavaScript puro
-- Organização de código
-- Versionamento com Git e GitHub
-- Deploy utilizando Vercel
-
----
-
-## 🚀 Tecnologias utilizadas
-
-- HTML5
+- HTML5 semântico
 - CSS3
-- JavaScript (ES6)
-- Git
-- GitHub
+- JavaScript puro
 - Vercel
 
----
+O site institucional não utiliza frameworks JavaScript ou CSS. A proposta é manter uma base leve, rápida e simples de publicar.
 
-## ✨ Funcionalidades
+## Estrutura
 
-- Landing Page moderna
-- Layout totalmente responsivo
-- Menu Mobile
-- Loader animado
-- Animações suaves ao navegar
-- Scroll Reveal
-- Botão "Voltar ao topo"
-- Formulário integrado ao WhatsApp
-- Design otimizado para Desktop e Mobile
+- `index.html`: apresentação institucional e principais soluções
+- `sobre.html`: posicionamento, princípios e forma de trabalho
+- `servicos.html`: projetos desenvolvidos sob medida
+- `produtos.html`: ZYRON Delivery, sistemas e soluções estruturadas
+- `landing-pages.html`: catálogo de Landing Pages
+- `mesh-conect.html`: parceria estratégica de marketing
+- `contato.html`: canais comerciais e solicitação de orçamento
+- `css/style.css`: identidade visual e responsividade
+- `js/script.js`: interações compartilhadas
+- `assets/`: imagens e elementos de marca
 
----
+## Execução local
 
-## 📸 Preview
+Por ser um site estático, basta servir a pasta por HTTP. Um exemplo com Python:
 
-> Em breve serão adicionadas imagens do projeto.
+```bash
+python -m http.server 4173
+```
 
----
+Depois, acesse `http://localhost:4173`.
 
-## 🌎 Acesse o projeto
+## Publicação
 
-### Site
+O repositório é conectado à Vercel. O arquivo `vercel.json` mantém URLs limpas, redirecionamentos, cache de assets e headers básicos de segurança.
 
-https://zyron-one.vercel.app/
+Antes de publicar:
 
-### Repositório
+1. Revise as alterações e o status do Git.
+2. Teste todas as páginas em desktop e mobile.
+3. Verifique links, console, SEO e acessibilidade.
+4. Confirme que nenhum arquivo sensível foi incluído.
+5. Faça commit e push somente após aprovação.
 
-https://github.com/felipedebom/zyron
+## Boas práticas
 
----
-
-
----
-
-## 💡 Objetivo
-
-Este projeto foi desenvolvido como parte do meu processo de aprendizado em desenvolvimento Front-End, buscando criar um site com aparência profissional, boa organização e foco na experiência do usuário.
-
----
-
-## 👨‍💻 Autor
-
-**Felipe de Bom**
-
-GitHub:
-https://github.com/felipedebom
-
----
-
-<div align="center">
-
-### ⭐ Se você gostou do projeto, deixe uma estrela no repositório.
-
-</div>
+- Preserve a identidade visual existente.
+- Mantenha Serviços e Produtos com posicionamentos distintos.
+- Não anuncie integrações, planos ou funcionalidades sem confirmação.
+- Use o domínio oficial em canonical e metadados sociais.
+- Otimize imagens antes de adicionar novos assets.
+- Nunca versione `.env`, credenciais ou dados de clientes.

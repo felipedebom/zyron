@@ -3,21 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZYRON | Desenvolvendo o Futuro</title>
+    <title>ZYRON | Sites, Sistemas e Produtos Digitais</title>
     <meta name="description" content="A ZYRON desenvolve sites, sistemas e aplicativos modernos para empresas que querem crescer com tecnologia, design e performance.">
     <meta name="theme-color" content="#070B14">
+    <link rel="canonical" href="https://zyrondigital.com.br/">
     <meta property="og:title" content="ZYRON | Desenvolvendo o Futuro">
     <meta property="og:description" content="Soluções digitais modernas para marcas que querem gerar autoridade, performance e novas oportunidades.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="assets/hero/hero-composition.png">
+    <meta property="og:url" content="https://zyrondigital.com.br/">
+    <meta property="og:image" content="https://zyrondigital.com.br/assets/hero/hero-composition.png">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=20260723m">
     <link rel="icon" href="assets/logo/logo-icon.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ZYRON",
+      "url": "https://zyrondigital.com.br",
+      "logo": "https://zyrondigital.com.br/assets/logo/logo-icon.png",
+      "email": "contato@zyrondigital.com.br",
+      "description": "Empresa de tecnologia especializada em sites, sistemas, produtos digitais, aplicativos e automações."
+    }
+    </script>
 </head>
 <body>
+    <a class="skip-link" href="#inicio">Pular para o conteúdo</a>
     <div id="loader">
     <img src="assets/logo/logo-horizontal.png" alt="ZYRON">
 </div>
@@ -26,16 +41,16 @@
     <img src="assets/logo/logo-horizontal.png" alt="ZYRON" class="logo">
 </a>
 
-        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
             <i class="fa-solid fa-bars"></i>
         </button>
 
-      <nav class="nav-menu" aria-label="Navegação principal">
-    <a href="/">Início</a>
-    <a href="/sobre">Sobre</a>
-    <a href="/servicos">Serviços</a>
-    <a href="/projetos">Projetos</a>
-    <a href="/contato">Contato</a>
+      <nav class="nav-menu" id="menu-principal" aria-label="Navegação principal">
+    <a href="index.html" aria-current="page">Início</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="produtos.html">Produtos</a>
+    <a href="contato.html">Contato</a>
 </nav>
 
         <a
@@ -56,7 +71,7 @@
                    
                     <h1>Transformamos ideias em <span>soluções digitais.</span></h1>
                     <p>
-                        Criamos sites, Landing Pages, sistemas e soluções de marketing digital para empresas que desejam fortalecer sua presença online, atrair clientes e crescer com tecnologia, estratégia e performance.
+                        Criamos sites, sistemas, automações e produtos digitais para empresas que querem vender melhor, organizar sua operação e crescer com tecnologia.
                     </p>
                     <div class="hero-buttons">
                         
@@ -65,24 +80,38 @@
     <i class="fa-solid fa-arrow-right"></i>
 </a>
                     </div>
+                    <div class="hero-proof" aria-label="Especialidades da ZYRON">
+                        <span><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Sites que convertem</span>
+                        <span><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Sistemas sob medida</span>
+                    </div>
                 </div>
 
               <div class="hero-image">
 
     <div class="hero-devices">
 
+        <div class="hero-orbit" aria-hidden="true"></div>
+        <div class="hero-float-card hero-float-card--top" aria-hidden="true">
+            <i class="fa-solid fa-chart-line"></i>
+            <span><strong>Estratégia</strong> para crescer</span>
+        </div>
+        <div class="hero-float-card hero-float-card--bottom" aria-hidden="true">
+            <i class="fa-solid fa-code"></i>
+            <span><strong>Tecnologia</strong> que resolve</span>
+        </div>
+
         <img
-            src="assets/hero/monitor.png"
+            src="assets/optimized/hero-monitor.webp"
             alt="Sistema Web ZYRON"
             class="device-monitor">
 
         <img
-            src="assets/hero/notebook.png"
+            src="assets/optimized/hero-notebook.webp"
             alt="Landing Page ZYRON"
             class="device-notebook">
 
         <img
-            src="assets/hero/phone.png"
+            src="assets/optimized/hero-phone.webp"
             alt="Aplicativo Mobile ZYRON"
             class="device-phone">
 
@@ -151,12 +180,13 @@
 </div>
 
             <div class="cards services-grid">
-                <article class="card"><div class="icone"><i class="fa-solid fa-globe"></i></div><h3>Desenvolvimento Web</h3><p>Sites modernos, rápidos e responsivos, desenvolvidos para fortalecer sua presença digital e gerar mais oportunidades para o seu negócio.</p></article>
-                <article class="card"><div class="icone"><i class="fa-solid fa-laptop-code"></i></div><h3>Sistemas Personalizados</h3><p>Soluções sob medida para automatizar processos, organizar informações e aumentar a eficiência da sua empresa.</p></article>
-                <article class="card"><div class="icone"><i class="fa-solid fa-mobile-screen-button"></i></div><h3>Aplicativos</h3><p>Aplicativos intuitivos para Android e iOS, desenvolvidos para oferecer praticidade, desempenho e uma excelente experiência ao usuário.</p></article>
-                <article class="card"><div class="icone"><i class="fa-solid fa-wand-magic-sparkles"></i></div><h3>Landing Pages</h3><p>Páginas de alta conversão criadas para campanhas, lançamentos e captação de clientes, com foco em resultados.</p></article>
-                <article class="card"><div class="icone"><i class="fa-solid fa-gears"></i></div><h3>Automação & Integrações</h3><p>Automatize tarefas e conecte sistemas, APIs, WhatsApp, CRMs e outras ferramentas para otimizar seus processos.</p></article>
-                <article class="card"><div class="icone"><i class="fa-solid fa-chart-line"></i></div><h3>Marketing Digital</h3><p>Em parceria com a Mesh Conect. Estratégias de marketing, gestão de tráfego, redes sociais e branding para aumentar sua visibilidade e acelerar o crescimento da sua empresa.</p></article>
+                <article class="card"><div class="icone"><i class="fa-solid fa-globe" aria-hidden="true"></i></div><h3>Presença Digital</h3><p>Sites institucionais e Landing Pages profissionais para apresentar sua empresa, fortalecer a marca e gerar novas oportunidades.</p></article>
+                <article class="card"><div class="icone"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i></div><h3>Sistemas & Produtos</h3><p>Sistemas web, aplicativos e produtos digitais para organizar processos, atender clientes e dar mais controle à operação.</p></article>
+                <article class="card"><div class="icone"><i class="fa-solid fa-gears" aria-hidden="true"></i></div><h3>Automação & Crescimento</h3><p>Integrações e automações para ganhar eficiência, com estratégias de marketing desenvolvidas em parceria com a Mesh Conect.</p></article>
+            </div>
+
+            <div class="section-actions">
+                <a class="text-link" href="servicos.html">Conhecer todos os serviços <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
         </section>
 
@@ -181,22 +211,34 @@
      <div class="section-heading">
 
              <h2 class="titulo">
-             Transformando ideias em resultados.
+             Soluções que sua empresa pode usar agora.
              </h2>
 
              <p class="subtitulo">
-             Conheça alguns dos nossos projetos em desenvolvimento web, Landing Pages e soluções de marketing digital, criados para fortalecer marcas, atrair clientes e gerar resultados.
+             Produtos próprios, páginas comerciais e serviços integrados para diferentes momentos do seu negócio.
              </p>
     </div>        
             
 
  <div class="portfolio-grid">
 
-    <a href="/landing-pages" class="projeto">
-        <img src="assets/empresa/cardlandingpages.png" alt="Landing Pages">
+    <a href="produtos.html#zyron-delivery" class="projeto">
+        <img src="assets/optimized/hero-dashboard.webp" alt="Painel administrativo do ZYRON Delivery" loading="lazy">
+        <div class="projeto-info">
+            <h3>ZYRON Delivery</h3>
+            <p>Cardápio digital, pedidos online e gestão completa para negócios de alimentação.</p>
+            <div class="projeto-link">
+    <span>Explorar</span>
+    <i class="fa-solid fa-arrow-right"></i>
+</div>
+        </div>
+    </a>
+
+    <a href="landing-pages.html" class="projeto">
+        <img src="assets/optimized/empresa-cardlandingpages.webp" alt="Landing Pages para diferentes segmentos" loading="lazy">
         <div class="projeto-info">
             <h3>Landing Pages</h3>
-            <p>Conheça Landing Pages desenvolvidas para diferentes segmentos de mercado.</p>
+            <p>Páginas comerciais criadas para apresentar ofertas e transformar visitantes em oportunidades.</p>
             <div class="projeto-link">
     <span>Explorar</span>
     <i class="fa-solid fa-arrow-right"></i>
@@ -204,23 +246,11 @@
         </div>
     </a>
 
-    <a href="/mesh-conect" class="projeto">
-        <img src="assets/empresa/meshconect.png" alt="Marketing Digital">
+    <a href="produtos.html" class="projeto">
+        <img src="assets/optimized/empresa-todos-os-projetos.webp" alt="Produtos digitais da ZYRON" loading="lazy">
         <div class="projeto-info">
-            <h3>Marketing Digital</h3>
-            <p>Conheça como a Mesh Conect ajuda empresas a crescer através do marketing digital.</p>
-            <div class="projeto-link">
-    <span>Explorar</span>
-    <i class="fa-solid fa-arrow-right"></i>
-</div>
-        </div>
-    </a>
-
-    <a href="/projetos" class="projeto">
-        <img src="assets/empresa/todos-os-projetos.png" alt="Todos os Projetos">
-        <div class="projeto-info">
-            <h3>Todos os Projetos</h3>
-            <p>Explore todos os projetos, soluções e serviços desenvolvidos pela ZYRON.</p>
+            <h3>Produtos ZYRON</h3>
+            <p>Conheça o ZYRON Delivery, sistemas de gestão e soluções prontas para adaptar ao seu negócio.</p>
             <div class="projeto-link">
     <span>Explorar</span>
     <i class="fa-solid fa-arrow-right"></i>
@@ -256,7 +286,7 @@
         </div>
 
         <div class="cta-image">
-            <img src="assets/cta/cta-showcase.png" alt="Projetos ZYRON">
+            <img src="assets/optimized/cta-cta-showcase.webp" alt="Soluções digitais ZYRON" loading="lazy">
         </div>
 
     </div>
@@ -270,9 +300,8 @@
 
 <footer>
 
-    <img src="assets/logo/1logo-horizontal.png" class="logo">
+    <a href="index.html" class="footer-brand" aria-label="ZYRON — voltar à página inicial"><img src="assets/logo/1logo-horizontal.png" class="logo" alt="ZYRON" width="145" height="36"></a>
 
-    
 <a href="mailto:contato@zyrondigital.com.br" class="footer-email">
     <i class="fa-solid fa-envelope"></i>
     contato@zyrondigital.com.br
@@ -282,7 +311,6 @@
 
 </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js?v=20260723b"></script>
 </body>
 </html>
-
