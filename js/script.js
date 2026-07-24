@@ -10,6 +10,10 @@ if (window.location.protocol === "file:") {
         "/sobre": "sobre.html",
         "/servicos": "servicos.html",
         "/produtos": "produtos.html",
+        "/zyron-delivery": "zyron-delivery.html",
+        "/first-smoke": "first-smoke.html",
+        "/emporio-reis-do-sabor": "emporio-reis-do-sabor.html",
+        "/innovare": "innovare.html",
         "/contato": "contato.html",
         "/landing-pages": "landing-pages.html",
         "/mesh-conect": "mesh-conect.html"
