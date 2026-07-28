@@ -131,7 +131,7 @@ contactForm?.addEventListener("submit", (event) => {
     const texto =
         `Olá, ZYRON! Meu nome é ${nome}. Empresa: ${empresa || "não informada"}. Tipo de projeto: ${tipo}. Mensagem: ${mensagem}`;
 
-    const telefone = "5548999999999";
+    const telefone = "5548996538492";
 
     const url =
         `https://wa.me/${telefone}?text=${encodeURIComponent(texto)}`;
