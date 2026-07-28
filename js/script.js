@@ -16,6 +16,8 @@ if (window.location.protocol === "file:") {
         "/innovare": "innovare.html",
         "/contato": "contato.html",
         "/landing-pages": "landing-pages.html",
+        "/aplicativos": "aplicativos.html",
+        "/automacoes-integracoes": "automacoes-integracoes.html",
         "/mesh-conect": "mesh-conect.html"
     };
 
@@ -208,3 +210,33 @@ heroDevices?.addEventListener("mouseleave", () => {
     monitor.style.transform = "translate(0px,0px)";
 
 });
+
+const deliverySalesVisual = document.querySelector(
+    ".delivery-hero--sales .delivery-hero__visual--polished"
+);
+
+const canTrackDeliveryPointer = window.matchMedia(
+    "(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)"
+);
+
+if (deliverySalesVisual && canTrackDeliveryPointer.matches) {
+    deliverySalesVisual.addEventListener("pointermove", (event) => {
+        const rect = deliverySalesVisual.getBoundingClientRect();
+        const horizontal = (event.clientX - rect.left) / rect.width - 0.5;
+        const vertical = (event.clientY - rect.top) / rect.height - 0.5;
+
+        deliverySalesVisual.style.setProperty(
+            "--pointer-rotate-x",
+            `${(-vertical * 5).toFixed(2)}deg`
+        );
+        deliverySalesVisual.style.setProperty(
+            "--pointer-rotate-y",
+            `${(horizontal * 6).toFixed(2)}deg`
+        );
+    });
+
+    deliverySalesVisual.addEventListener("pointerleave", () => {
+        deliverySalesVisual.style.setProperty("--pointer-rotate-x", "0deg");
+        deliverySalesVisual.style.setProperty("--pointer-rotate-y", "0deg");
+    });
+}
